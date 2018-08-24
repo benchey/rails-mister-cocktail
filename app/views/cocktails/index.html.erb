@@ -1,5 +1,12 @@
+
 <div class="banner" style="background-image: linear-gradient(rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1466838931486-92f3b5ff31a6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ec403466327bc5fe8d406522c849371f&auto=format&fit=crop&w=1487&q=80')">
-  <h1>My cocktails</h1>
+  <div class="">
+    <h1>My cocktails</h1>
+    <%= form_tag(cocktails_path, method: :get, class: "form-inline") do %>
+      <%= text_field_tag :query, params[:query], class: "form-control" %>
+      <%= submit_tag 'Search', name:nil, class: "btn btn-danger" %>
+    <% end %>
+  </div>
 </div>
 
 <div class="container">

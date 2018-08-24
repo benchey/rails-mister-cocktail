@@ -2,7 +2,11 @@ class CocktailsController < ApplicationController
   before_action :set_cocktails, only: [:show, :edit, :update, :destroy]
 
   def index
-    @cocktails = Cocktail.all
+    if params[:query]
+      @cocktails = Cocktail.where("name LIKE ?", "%#{params[:query]}%")
+    else
+      @cocktails = Cocktail.all
+    end
   end
 
   def show
@@ -28,15 +32,6 @@ class CocktailsController < ApplicationController
     redirect_to cocktails_path
   end
 
-  def search(name)
-    @cocktails = Cocktail.all.where(name: name)
-    render :index
-    #if params[:query] not nill
-    #@cocktails = Cocktail.where(LIKE params query)
-    #else
-    #@cocktails = Cocktail.all
-  end
-
   private
 
   def set_cocktails
@@ -44,6 +39,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :picture_url)
+    params.require(:cocktail).permit(:name, :picture_url, :query)
   end
 end
