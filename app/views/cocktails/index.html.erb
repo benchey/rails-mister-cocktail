@@ -9,13 +9,20 @@
       <div class="col-col-xs-12 col-md-3">
         <%= link_to cocktail_path(cocktail) do %>
           <div class="cocktail-card">
-            <div class="cocktail-picture"></div>
+            <div class="cocktail-details">
+              <div class="cocktail-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%=cocktail.picture_url%>');">
+              </div>
+              <div class="cocktail-erase">
+                <%= link_to cocktail_path(cocktail), method: :delete, data: {confirm: "Are you sure?"} do %>
+                  <i class="fas fa-times"></i>
+                <%end%>
+              </div>
+            </div>
             <div class="cocktail-footer">
               <p><%= cocktail.name%></p>
             </div>
           </div>
         <% end %>
-
       </div>
       <% end %>
     </div>

@@ -10,5 +10,7 @@
 console.log('Hello World from Webpacker')
 
 import 'bootstrap';
+import 'dropzone';
 import { UpdateNavbarOnScoll } from '../components/navbar';
 UpdateNavbarOnScoll();
+

@@ -1,3 +1,7 @@
+a {
+  text-decoration: none !important;
+}
+
 .cocktail-card {
   width:100%;
   margin: 10px;
@@ -12,15 +16,10 @@
   height: 170px;
   position: relative;
   margin: 10px;
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1532117182044-031e7cd916ee?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5a43e535965d62203250faaa661182db&auto=format&fit=crop&w=800&q=80');
 }
 
-.cocktail-content{
-  padding: 10px;
-  font-size: 15px;
-  position:absolute;
-  color: white;
-  font-weight:bold;
+.cocktail-details {
+  position:relative;
 }
 
 .cocktail-footer {
@@ -30,6 +29,17 @@
   p {
     font-size: 15px;
     margin-bottom: 0;
+    color: #EE5F5B;
+    font-weight: bold;
+  }
+}
+
+.cocktail-erase {
+  position: absolute;
+  right: 17px;
+  top: 2px;
+  i {
+    color: white;
   }
 }
 
