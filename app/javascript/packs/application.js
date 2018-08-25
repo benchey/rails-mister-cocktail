@@ -11,6 +11,10 @@ console.log('Hello World from Webpacker')
 
 import 'bootstrap';
 import 'dropzone';
-import { UpdateNavbarOnScoll } from '../components/navbar';
-UpdateNavbarOnScoll();
+import 'sweetalert';
 
+import {  } from '../components/buttton';
+();
+
+import {myDropzone} from '../components/form';
+myDropzone();

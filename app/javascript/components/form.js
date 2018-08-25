@@ -1,5 +1,6 @@
 import 'dropzone';
 
-new Dropzone("#dropzone", { url: "/file/post"});
+const myDropzone = document.getElementById("#mydropzone").dropzone({ url: "/cocktails/post" });
 
-export {Dropzone}
+export {myDropzone}
+

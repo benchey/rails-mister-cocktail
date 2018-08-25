@@ -2,11 +2,12 @@
 
   <div class="banner-content">
     <h1>Add a new cocktail</h1>
-    <div class="add-cocktail list-inline">
-      <%= simple_form_for(@cocktail, html: {class: "dropzone"}) do |f| %>
+    <br>
+    <div class="add-cocktail form-inline">
+      <%= simple_form_for(@cocktail) do |f| %>
         <%= f.input :name, label: false, placeholder: "Cocktail name" %>
-        <%= f.file_field :picture_url, label: false %>
-        <%= f.input :picture_url_cache, as: :hidden %>
+        <%= f.file_field :picture_url, class: "form-control" %>
+        <%= f.hidden_field :picture_url_cache %>
         <%= f.submit "Add a new cocktail", class: "btn btn-danger" %>
       <% end %>
     </div>
