@@ -13,8 +13,8 @@ import 'bootstrap';
 import 'dropzone';
 import 'sweetalert';
 
-import {  } from '../components/buttton';
-();
+import {sweetButton} from '../components/button';
+sweetButton();
 
 import {myDropzone} from '../components/form';
 myDropzone();
